@@ -265,8 +265,8 @@ void loop() {
 Conforme os critérios da atividade, o projeto foi avaliado por, no mínimo, dois colegas. Seguem os resultados das avaliações.
 
 ### Avaliador 1
-- **Nome completo:**
-- **Feedback/notas:**
+- **Nome completo:** Lívia Sabóia Tavares
+- **Feedback/notas:** "Ficou muito bom!! Tudo muito bem organizado, vídeo explicativo, documentação e fotos. Vou me inspirar na documentação dela para os meus próximos trabalhos :)"
 
 ### Avaliador 2
 - **Nome completo:**
