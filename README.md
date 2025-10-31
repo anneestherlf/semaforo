@@ -8,8 +8,8 @@ O projeto é dividido na montagem física do circuito em protoboard e na program
 
 ## Índice
 - [Projeto 1 - Semáforo Simples](https://github.com/anneestherlf/semaforo/blob/main/README.md#projeto-1-sem%C3%A1foro-simples)
-- [Projeto 2 - Semáforo (POO e Ponteiros](#)
-- [Avaliação de Pares](#)
+- [Projeto 2 - Semáforo (POO e Ponteiros)]()
+- [Avaliação de Pares](https://github.com/anneestherlf/semaforo/blob/main/README.md#parte-3-avalia%C3%A7%C3%A3o-de-pares)
 
 
 # Projeto 1: Semáforo Simples 
@@ -159,6 +159,9 @@ void loop() {
   // Após o amarelo, o loop() recomeça, voltando para 'acendeVermelho(6000)'.
 }
 ```
+
+# Projeto 2 - Semáforo (POO e Ponteiros)
+
 # Parte 3: Avaliação de Pares
 Conforme os critérios da atividade, o projeto foi avaliado por, no mínimo, dois colegas. Seguem os resultados das avaliações.
 
