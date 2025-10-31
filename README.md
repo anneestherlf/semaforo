@@ -29,7 +29,7 @@ A montagem foi realizada buscando simular um semáforo veicular padrão (vermelh
 | Protoboard         | - | 1        | Placa de ensaio para montar o circuito sem necessidade de solda.            |
 | Jumper Wires       | Macho-Macho         | ~6         | Fios para realizar as conexões entre o Arduino e a protoboard.              |
 
-![componentess](https://github.com/user-attachments/assets/fd3b0414-e3c5-49b5-9b10-b7cebb7fbf6a)
+<img src="https://github.com/user-attachments/assets/fd3b0414-e3c5-49b5-9b10-b7cebb7fbf6a" alt="componentess" width="600">
 
 # Tutorial de Montagem e Conexões
 
@@ -39,7 +39,7 @@ O circuito foi montado de forma a garantir a clareza das conexões, com os LEDs 
 
 1. **Posicionamento dos LEDs:** Os LEDs foram posicionados na protoboard.
 
-![posicao](https://github.com/user-attachments/assets/fe499049-13db-452b-b970-f849a9ac12f9)
+<img src="https://github.com/user-attachments/assets/fe499049-13db-452b-b970-f849a9ac12f9" width="600">
 
 
 3. **Identificação dos Terminais:** Cada LED possui dois terminais: o Anodo (perna mais longa, positiva) e o Catodo (perna mais curta, negativa).
@@ -49,36 +49,35 @@ O circuito foi montado de forma a garantir a clareza das conexões, com os LEDs 
    - LED Verde → Pino Digital 11
 5. **Conexão do Catodo (Negativo) e Resistor:** O terminal Catodo de cada LED foi conectado a um resistor.
 
-![resistores](https://github.com/user-attachments/assets/be2612de-c6da-452a-8462-04e9784b3edc)
-
+<img src="https://github.com/user-attachments/assets/be2612de-c6da-452a-8462-04e9784b3edc" width="600">
 
 7. **Conexão ao GND (Terra):** A extremidade dos três resistores foi conectada ao barramento de "Terra" (GND) da protoboard.
 
-![gnd1](https://github.com/user-attachments/assets/e2d7d9ab-7acd-42f2-8680-f5a6cf624345)
+<img src="https://github.com/user-attachments/assets/e2d7d9ab-7acd-42f2-8680-f5a6cf624345" width="600">
 
-![gnd2](https://github.com/user-attachments/assets/bce6adf2-1587-440a-b4fd-15ae071b2275)
+<img src="https://github.com/user-attachments/assets/bce6adf2-1587-440a-b4fd-15ae071b2275" width="600">
 
 9. **LEDs:** Conecte um fio jumper do Pino Digital 11 do Arduino até a fileira da perna longa (Anodo +) do LED Verde.
 
-![verde-led](https://github.com/user-attachments/assets/08f47688-ef58-4330-9435-512b870dafb1)
+<img src="https://github.com/user-attachments/assets/08f47688-ef58-4330-9435-512b870dafb1" width="600">
 
-![verde-led-pino](https://github.com/user-attachments/assets/ca2c0e74-8b96-461c-b7df-f3fb6b4764b8)
+<img src="https://github.com/user-attachments/assets/ca2c0e74-8b96-461c-b7df-f3fb6b4764b8" width="600">
 
 Faça o mesmo para o LED Vermelho (no Pino Digital 9) e para o LED Amarelo (no Pino Digital 10). 
 
-![pinos](https://github.com/user-attachments/assets/406e99d9-fddb-4e3a-b13b-fb41ba15b27a)
+<img src="https://github.com/user-attachments/assets/406e99d9-fddb-4e3a-b13b-fb41ba15b27a" width="600">
 
 10. **Energia:** Conecte a uma fonte de energia (nesse caso, usei o cabo USB no notebook).
 
-![usb](https://github.com/user-attachments/assets/92962da4-aa5b-448d-83e6-f9ada9f11b1f)
+<img src="https://github.com/user-attachments/assets/92962da4-aa5b-448d-83e6-f9ada9f11b1f" width="600">
 
 11. Conecte e execute o código no Arduino IDE (<https://www.arduino.cc/en/software>, ou outra ferramenta de preferência). O código pode ser encontrado na seção "Código-fonte".
 
-![codigo](https://github.com/user-attachments/assets/b268a0c2-1a4d-4465-befa-690ba07942da)
+<img src="https://github.com/user-attachments/assets/b268a0c2-1a4d-4465-befa-690ba07942da" width="600">
 
 Resultado:
 
-![video (2) (1) (1) (1)](https://github.com/user-attachments/assets/f94aac18-8eea-48ac-9abf-e57594e7c24b)
+<img src="https://github.com/user-attachments/assets/f94aac18-8eea-48ac-9abf-e57594e7c24b" width="600">
 
 **Por que usar resistores?** O resistor é essencial para limitar a corrente que flui do pino digital do Arduino (que opera a 5V) para o LED. Sem ele, o LED receberia uma corrente excessiva e queimaria instantaneamente.
 
