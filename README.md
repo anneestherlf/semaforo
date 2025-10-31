@@ -7,7 +7,7 @@ O projeto é dividido na montagem física do circuito em protoboard e na program
 **Aluna Anne Esther Lins Figueirôa - T18.**
 
 ## Índice
-- [Projeto 1 - Semáforo Simples](#)
+- [Projeto 1 - Semáforo Simples](https://github.com/anneestherlf/semaforo/blob/main/README.md#projeto-1-sem%C3%A1foro-simples)
 - [Projeto 2 - Semáforo (POO e Ponteiros](#)
 - [Avaliação de Pares](#)
 
