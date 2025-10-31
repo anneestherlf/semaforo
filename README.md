@@ -6,14 +6,22 @@ O projeto é dividido na montagem física do circuito em protoboard e na program
 
 **Aluna Anne Esther Lins Figueirôa - T18.**
 
-# Demonstração (Vídeo)
+## Índice
+- [Projeto 1 - Semáforo Simples](#)
+- [Projeto 2 - Semáforo (POO e Ponteiros](#)
+- [Avaliação de Pares](#)
+
+
+# Projeto 1: Semáforo Simples 
+
+## Demonstração (Vídeo)
 
 O vídeo abaixo apresenta a montagem física do semáforo em funcionamento na protoboard. Apareço na gravação para comprovar a autoria, e o ciclo de temporização (vermelho, verde, amarelo) é demonstrado conforme os requisitos da atividade (LEDs acendendo e apagando conforme o código).
 
 **Link para o vídeo:**  
 <https://drive.google.com/file/d/1gO_KOI8kHlK7yTHxjkbuD9sJQyMjtKt0/view?usp=sharing>
 
-# Parte 1: Montagem Física do Semáforo
+## Parte 1: Montagem Física do Semáforo
 
 A montagem foi realizada buscando simular um semáforo veicular padrão (vermelho, amarelo, verde).
 
@@ -31,7 +39,7 @@ A montagem foi realizada buscando simular um semáforo veicular padrão (vermelh
 
 <img src="https://github.com/user-attachments/assets/fd3b0414-e3c5-49b5-9b10-b7cebb7fbf6a" alt="componentess" width="600">
 
-# Tutorial de Montagem e Conexões
+## Tutorial de Montagem e Conexões
 
 1. **Posicionamento dos LEDs:** Os LEDs foram posicionados na protoboard.
 
@@ -76,7 +84,7 @@ Resultado:
 
 **Por que usar resistores?** O resistor é essencial para limitar a corrente que flui do pino digital do Arduino (que opera a 5V) para o LED. Sem ele, o LED receberia uma corrente excessiva e queimaria instantaneamente.
 
-# Parte 2: Programação e Lógica do Semáforo
+## Parte 2: Programação e Lógica do Semáforo
 
 O código-fonte foi desenvolvido na IDE do Arduino (baseado em C++) e segue a lógica de temporização exigida.
 1. **Luz Vermelha:** Acesa por 6 segundos (Verde e Amarelo apagados).
@@ -151,13 +159,13 @@ void loop() {
   // Após o amarelo, o loop() recomeça, voltando para 'acendeVermelho(6000)'.
 }
 ```
-## Parte 3: Avaliação de Pares
+# Parte 3: Avaliação de Pares
 Conforme os critérios da atividade, o projeto foi avaliado por, no mínimo, dois colegas. Seguem os resultados das avaliações.
 
 ### Avaliador 1
 - **Nome completo:**
 - **Feedback/notas:**
 
-- ### Avaliador 2
+### Avaliador 2
 - **Nome completo:**
 - **Feedback/notas:**
