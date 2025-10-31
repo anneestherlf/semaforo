@@ -29,23 +29,56 @@ A montagem foi realizada buscando simular um semáforo veicular padrão (vermelh
 | Protoboard         | - | 1        | Placa de ensaio para montar o circuito sem necessidade de solda.            |
 | Jumper Wires       | Macho-Macho         | ~6         | Fios para realizar as conexões entre o Arduino e a protoboard.              |
 
+![componentess](https://github.com/user-attachments/assets/fd3b0414-e3c5-49b5-9b10-b7cebb7fbf6a)
+
 # Tutorial de Montagem e Conexões
 
 O circuito foi montado de forma a garantir a clareza das conexões, com os LEDs organizados na ordem correta (vermelho no topo, verde na base).
 
 **Justificativa e Passo a Passo:**
 
-- IMAGENS DO ESQUEMA DE MONTAGEM EM CADA PASSO, passo a passo (1 imagem pra cada passo)
+1. **Posicionamento dos LEDs:** Os LEDs foram posicionados na protoboard.
 
-1. **Posicionamento dos LEDs:** Os LEDs foram posicionados na protoboard, respeitando a ordem (Vermelho, Amarelo, Verde).
-2. **Identificação dos Terminais:** Cada LED possui dois terminais: o Anodo (perna mais longa, positiva) e o Catodo (perna mais curta, negativa).
-3. **Conexão do Anodo (Positivo):** O terminal Anodo de cada LED foi conectado a um pino de saída digital do Arduino, conforme a tabela:
-   - LED Vermelho → Pino Digital 13
-   - LED Amarelo → Pino Digital 12
+![posicao](https://github.com/user-attachments/assets/fe499049-13db-452b-b970-f849a9ac12f9)
+
+
+3. **Identificação dos Terminais:** Cada LED possui dois terminais: o Anodo (perna mais longa, positiva) e o Catodo (perna mais curta, negativa).
+4. **Conexão do Anodo (Positivo):** O terminal Anodo de cada LED foi conectado a um pino de saída digital do Arduino, conforme a tabela:
+   - LED Vermelho → Pino Digital 9
+   - LED Amarelo → Pino Digital 10
    - LED Verde → Pino Digital 11
-4. **Conexão do Catodo (Negativo) e Resistor:** O terminal Catodo de cada LED foi conectado a um resistor.
-5. **Conexão ao GND (Terra):** A outra extremidade de cada um dos três resistores foi conectada ao barramento de "Terra" (GND) da protoboard.
-6. **Alimentação GND:** O pino GND do Arduino foi conectado ao barramento de "Terra" da protoboard para fechar o circuito.
+5. **Conexão do Catodo (Negativo) e Resistor:** O terminal Catodo de cada LED foi conectado a um resistor.
+
+![resistores](https://github.com/user-attachments/assets/be2612de-c6da-452a-8462-04e9784b3edc)
+
+
+7. **Conexão ao GND (Terra):** A extremidade dos três resistores foi conectada ao barramento de "Terra" (GND) da protoboard.
+
+![gnd1](https://github.com/user-attachments/assets/e2d7d9ab-7acd-42f2-8680-f5a6cf624345)
+
+![gnd2](https://github.com/user-attachments/assets/bce6adf2-1587-440a-b4fd-15ae071b2275)
+
+9. **LEDs:** Conecte um fio jumper do Pino Digital 11 do Arduino até a fileira da perna longa (Anodo +) do LED Verde.
+
+![verde-led](https://github.com/user-attachments/assets/08f47688-ef58-4330-9435-512b870dafb1)
+
+![verde-led-pino](https://github.com/user-attachments/assets/ca2c0e74-8b96-461c-b7df-f3fb6b4764b8)
+
+Faça o mesmo para o LED Vermelho (no Pino Digital 9) e para o LED Amarelo (no Pino Digital 10). 
+
+![pinos](https://github.com/user-attachments/assets/406e99d9-fddb-4e3a-b13b-fb41ba15b27a)
+
+10. **Energia:** Conecte a uma fonte de energia (nesse caso, usei o cabo USB no notebook).
+
+![usb](https://github.com/user-attachments/assets/92962da4-aa5b-448d-83e6-f9ada9f11b1f)
+
+11. Conecte e execute o código no Arduino IDE (<https://www.arduino.cc/en/software>, ou outra ferramenta de preferência). O código pode ser encontrado na seção "Código-fonte".
+
+![codigo](https://github.com/user-attachments/assets/b268a0c2-1a4d-4465-befa-690ba07942da)
+
+Resultado:
+
+![video (2) (1) (1) (1)](https://github.com/user-attachments/assets/f94aac18-8eea-48ac-9abf-e57594e7c24b)
 
 **Por que usar resistores?** O resistor é essencial para limitar a corrente que flui do pino digital do Arduino (que opera a 5V) para o LED. Sem ele, o LED receberia uma corrente excessiva e queimaria instantaneamente.
 
@@ -58,13 +91,71 @@ O código-fonte foi desenvolvido na IDE do Arduino (baseado em C++) e segue a l�
 
 ## Código-Fonte
 
-O código completo pode ser encontrado neste repositório no arquivo:  
-- LINK AQUI PRO ARQUIVO OU APONTAR PRA RAIZ
+O código completo pode ser encontrado neste repositório no arquivo `semaforo.ino`.
 
 Abaixo está o trecho principal da lógica (loop), que garante a sequência e temporização:
 
 ```cpp
-COLOCAR TRECHO AQUI
+// O #define é uma diretiva de pré-processador que substitui um texto por outro.
+// Aqui, estamos associando nomes (verde, amarelo, vermelho) aos números das portas digitais do Arduino.
+#define verde 11      // Define 'verde' como um apelido para a porta digital 11
+#define amarelo 10    // Define 'amarelo' como um apelido para a porta digital 10
+#define vermelho 9    // Define 'vermelho' como um apelido para a porta digital 9
+
+// A função setup() é executada uma vez quando o Arduino é ligado ou resetado.
+// É usada para inicializar configurações.
+void setup() {
+  // pinMode() configura uma porta digital específica para funcionar como entrada (INPUT) ou saída (OUTPUT).
+  pinMode(verde, OUTPUT);    // Configura a porta 'verde' (11) como saída digital
+  pinMode(amarelo, OUTPUT);  // Configura a porta 'amarelo' (10) como saída digital
+  pinMode(vermelho, OUTPUT); // Configura a porta 'vermelho' (9) como saída digital
+}
+
+// Declaração de uma função personalizada chamada 'acendeVerde'.
+// 'void' significa que a função não retorna nenhum valor.
+// '(int tempo)' significa que ela aceita um argumento (um número inteiro) chamado 'tempo'.
+void acendeVerde(int tempo) {
+  // digitalWrite() escreve um valor HIGH (ligado, 5V) ou LOW (desligado, 0V) em uma porta digital.
+  digitalWrite(verde, HIGH);    // Liga o LED conectado à porta 'verde'
+  digitalWrite(amarelo, LOW);   // Desliga o LED conectado à porta 'amarelo'
+  digitalWrite(vermelho, LOW);  // Desliga o LED conectado à porta 'vermelho'
+  
+  // delay() pausa a execução do programa pelo número de milissegundos especificado.
+  delay(tempo);                 // Mantém o LED verde aceso pelo 'tempo' recebido (em milissegundos)
+}
+
+// Declaração da função 'acendeVermelho'.
+// Funciona de forma similar à 'acendeVerde', mas acende o LED vermelho.
+void acendeVermelho(int tempo) {
+  digitalWrite(verde, LOW);     // Desliga o LED 'verde'
+  digitalWrite(amarelo, LOW);    // Desliga o LED 'amarelo'
+  digitalWrite(vermelho, HIGH); // Liga o LED 'vermelho'
+  delay(tempo);                  // Mantém o LED vermelho aceso pelo 'tempo' especificado
+}
+
+// Declaração da função 'acendeAmarelo'.
+// Acende o LED amarelo e apaga os outros.
+void acendeAmarelo(int tempo) {
+  digitalWrite(verde, LOW);     // Desliga o LED 'verde'
+  digitalWrite(amarelo, HIGH);   // Liga o LED 'amarelo'
+  digitalWrite(vermelho, LOW);  // Desliga o LED 'vermelho'
+  delay(tempo);                  // Mantém o LED amarelo aceso pelo 'tempo' especificado
+}
+
+// A função loop() é executada continuamente após a função setup() terminar.
+// É o corpo principal do programa.
+void loop() {
+  // Chama a função 'acendeVermelho' e passa o valor 6000 como argumento 'tempo'.
+  acendeVermelho(6000); // Mantém o sinal vermelho aceso por 6000 milissegundos (6 segundos)
+  
+  // Chama a função 'acendeVerde' e passa o valor 4000.
+  acendeVerde(4000);    // Mantém o sinal verde aceso por 4000 milissegundos (4 segundos)
+  
+  // Chama a função 'acendeAmarelo' e passa o valor 2000.
+  acendeAmarelo(2000);  // Mantém o sinal amarelo aceso por 2000 milissegundos (2 segundos)
+  
+  // Após o amarelo, o loop() recomeça, voltando para 'acendeVermelho(6000)'.
+}
 ```
 ## Parte 3: Avaliação de Pares
 Conforme os critérios da atividade, o projeto foi avaliado por, no mínimo, dois colegas. Seguem os resultados das avaliações.
