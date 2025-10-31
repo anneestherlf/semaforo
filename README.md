@@ -93,7 +93,7 @@ O código-fonte foi desenvolvido na IDE do Arduino (baseado em C++) e segue a l�
 
 ## Código-Fonte
 
-O código completo pode ser encontrado neste repositório no arquivo `semaforo.ino`.
+O código completo pode ser encontrado neste repositório no arquivo `semaforo-projeto1.ino`.
 
 Abaixo está o trecho principal da lógica (loop), que garante a sequência e temporização:
 
