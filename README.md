@@ -11,7 +11,7 @@ O projeto é dividido na montagem física do circuito em protoboard e na program
 O vídeo abaixo apresenta a montagem física do semáforo em funcionamento na protoboard. Apareço na gravação para comprovar a autoria, e o ciclo de temporização (vermelho, verde, amarelo) é demonstrado conforme os requisitos da atividade (LEDs acendendo e apagando conforme o código).
 
 **Link para o vídeo:**  
-- LINK DO VIDEO
+<https://drive.google.com/file/d/1gO_KOI8kHlK7yTHxjkbuD9sJQyMjtKt0/view?usp=sharing>
 
 # Parte 1: Montagem Física do Semáforo
 
