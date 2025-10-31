@@ -8,7 +8,7 @@ O projeto é dividido na montagem física do circuito em protoboard e na program
 
 ## Índice
 - [Projeto 1 - Semáforo Simples](https://github.com/anneestherlf/semaforo/blob/main/README.md#projeto-1-sem%C3%A1foro-simples)
-- [Projeto 2 - Semáforo (POO e Ponteiros)]()
+- [Projeto 2 - Semáforo (POO e Ponteiros)](https://github.com/anneestherlf/semaforo/blob/main/README.md#projeto-2---sem%C3%A1foro-poo-e-ponteiros)
 - [Avaliação de Pares](https://github.com/anneestherlf/semaforo/blob/main/README.md#parte-3-avalia%C3%A7%C3%A3o-de-pares)
 
 
