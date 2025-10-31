@@ -27,20 +27,15 @@ A montagem foi realizada buscando simular um semáforo veicular padrão (vermelh
 | LED Verde          | Difuso        | 1          | Representa a fase "SIGA" do semáforo.                                       |
 | Resistores         | -          | 3          | Protege cada LED limitando a corrente elétrica vinda dos pinos do Arduino.  |
 | Protoboard         | - | 1        | Placa de ensaio para montar o circuito sem necessidade de solda.            |
-| Jumper Wires       | Macho-Macho         | ~6         | Fios para realizar as conexões entre o Arduino e a protoboard.              |
+| Jumper Wires       | Macho-Macho         | 4         | Fios para realizar as conexões entre o Arduino e a protoboard.              |
 
 <img src="https://github.com/user-attachments/assets/fd3b0414-e3c5-49b5-9b10-b7cebb7fbf6a" alt="componentess" width="600">
 
 # Tutorial de Montagem e Conexões
 
-O circuito foi montado de forma a garantir a clareza das conexões, com os LEDs organizados na ordem correta (vermelho no topo, verde na base).
-
-**Justificativa e Passo a Passo:**
-
 1. **Posicionamento dos LEDs:** Os LEDs foram posicionados na protoboard.
 
 <img src="https://github.com/user-attachments/assets/fe499049-13db-452b-b970-f849a9ac12f9" width="600">
-
 
 3. **Identificação dos Terminais:** Cada LED possui dois terminais: o Anodo (perna mais longa, positiva) e o Catodo (perna mais curta, negativa).
 4. **Conexão do Anodo (Positivo):** O terminal Anodo de cada LED foi conectado a um pino de saída digital do Arduino, conforme a tabela:
@@ -71,7 +66,7 @@ Faça o mesmo para o LED Vermelho (no Pino Digital 9) e para o LED Amarelo (no P
 
 <img src="https://github.com/user-attachments/assets/92962da4-aa5b-448d-83e6-f9ada9f11b1f" width="600">
 
-11. Conecte e execute o código no Arduino IDE (<https://www.arduino.cc/en/software>, ou outra ferramenta de preferência). O código pode ser encontrado na seção "Código-fonte".
+11. Conecte e execute o código no Arduino IDE (<https://www.arduino.cc/en/software>, ou outra ferramenta de sua preferência). O código pode ser encontrado na seção "Código-fonte".
 
 <img src="https://github.com/user-attachments/assets/b268a0c2-1a4d-4465-befa-690ba07942da" width="600">
 
