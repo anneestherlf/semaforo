@@ -269,5 +269,5 @@ Conforme os critérios da atividade, o projeto foi avaliado por, no mínimo, doi
 - **Feedback/notas:** "Ficou muito bom!! Tudo muito bem organizado, vídeo explicativo, documentação e fotos. Vou me inspirar na documentação dela para os meus próximos trabalhos :)"
 
 ### Avaliador 2
-- **Nome completo:**
-- **Feedback/notas:**
+- **Nome completo:** Maria Vitória dos Santos
+- **Feedback/notas:** "Documentação bem feita e sistema funcionando, utilizou POO e Ponteiro. Vídeo com presença da autora e muito bem gravado."
